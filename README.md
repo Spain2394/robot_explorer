@@ -1,5 +1,5 @@
 ## robot-exploration
--Turtlebot RRT exploration and target detection using SIFT
+- Turtlebot RRT exploration and target detection using SIFT
 
 ## Setup
 - to bringup Turtlebot and perform mapping and localization run ```roslaunch robot_explorer setup.launch```

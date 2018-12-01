@@ -10,5 +10,6 @@
 
 ### Teleoperation
 - Controller config can be evaluated by running: ```jstest /dev/input/js0```
+- Create ```my_ps3_teleop.launch``` to reflect controller config
 - To test using controller teleop run: ```roslaunch turtlebot_teleop my_ps3_teleop.launch```
 

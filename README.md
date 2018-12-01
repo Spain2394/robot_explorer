@@ -5,7 +5,9 @@
 - to bringup Turtlebot and perform mapping and localization run: ```roslaunch robot_explorer setup.launch```
 
 ## Laser Scanner
+- check for usb connectivity by running:```ls -l /dev/ttyACM0```
 - to publish to the scan topic using live hokuyo sensor data run: ```rosrun urg_node urg_node```
+
 
 
 ## Teleoperation

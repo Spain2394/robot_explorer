@@ -1,19 +1,22 @@
 <launch>
 
   <include file="$(find turtlebot_bringup)/launch/minimal.launch">
-    <!--  <arg name="rgb_processing" value="false" />
-    <arg name="depth_registration" value="false" />
-    <arg name="depth_processing" value="false" />
-    
-    <arg name="scan_topic" value="/scan" /> -->
-  </include>
-  
-  <include file="$(find hector_slam_launch)/launch/tutorial.launch">
-    <!--  <arg name="rgb_processing" value="false" />
-    <arg name="depth_registration" value="false" />
-    <arg name="depth_processing" value="false" />
-    
-    <arg name="scan_topic" value="/scan" /> -->
+    <!-- <arg name="rgb_processing" value="false" /> <arg name="depth_registration" value="false" /> <arg name="depth_processing" value="false" /> <arg name="scan_topic" value="/scan" /> -->
   </include>
 
+  <include file="$(find turtlebot_navigation)/launch/gmapping_demo.launch">
+    <!-- <arg name="rgb_processing" value="false" /> <arg name="depth_registration" value="false" /> <arg name="depth_processing" value="false" /> <arg name="scan_topic" value="/scan" /> -->
+  </include>
+
+
+  <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch">
+    <!-- <arg name="rgb_processing" value="false" /> <arg name="depth_registration" value="false" /> <arg name="depth_processing" value="false" /> <arg name="scan_topic" value="/scan" /> -->
+  </include>
+
+  <!-- Scan node -->
+
+  <!-- scan transform -->
+  <node pkg="tf" type="static_transform_publisher" name="laser_frame" args="0.206 0 0.16 0 0 0 1 base_link laser 100"/>
+
 </launch>
+

@@ -94,15 +94,14 @@ def compare_images(img1,img2,MIN_MATCH_COUNT=10,NUM_DISPLAY_MATCHES="good"):
     else:
         img3 = None
     return img3
-    
 
 
-    
-img1 = cv2.imread("test_pic.jpg") # queryImage
-img1 = img1[100:400,100:400,:] #crop image1
+if __name__ == '__main__':
+    img1 = cv2.imread("test_pic.jpg") # queryImage
+    img1 = img1[100:400,100:400,:] #crop image1
 
-img2 = cv2.imread("test_pic.jpg") # testImage
-img2 = np.flip(np.swapaxes(img2,0,1), 0) # filped
+    img2 = cv2.imread("test_pic.jpg") # testImage
+    img2 = np.flip(np.swapaxes(img2,0,1), 0) # filped
 
-img3 = compare_images(img1,img2,NUM_DISPLAY_MATCHES=10)
-cv2.imwrite("matching_test2.jpg",img3)
+    img3 = compare_images(img1,img2,NUM_DISPLAY_MATCHES=10)
+    cv2.imwrite("matching_test2.jpg",img3)

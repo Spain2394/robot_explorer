@@ -13,9 +13,6 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-Modified by Allen Spain
-12/1/2018
 '''
 
 # TurtleBot must have minimal.launch & amcl_demo.launch
@@ -35,7 +32,7 @@ class GoToPose():
 
 	# What to do if shut down (e.g. Ctrl-C or failure)
 	rospy.on_shutdown(self.shutdown)
-	
+
 	# Tell the action client that we want to spin a thread by default
 	self.move_base = actionlib.SimpleActionClient("robot_1/move_base", MoveBaseAction)
 	rospy.loginfo("Wait for the action server to come up")
@@ -59,7 +56,7 @@ class GoToPose():
         self.move_base.send_goal(goal)
 
 	# Allow TurtleBot up to 60 seconds to complete task
-	success = self.move_base.wait_for_result(rospy.Duration(160)) 
+	success = self.move_base.wait_for_result(rospy.Duration(160))
 
         state = self.move_base.get_state()
         result = False
@@ -88,18 +85,21 @@ if __name__ == '__main__':
         position = {'x': 1.36, 'y' : -1.46}
         quaternion = {'r1' : 0.000, 'r2' : 0.000, 'r3' : 0.000, 'r4' : 1.000}
 
-        rospy.loginfo("Go to (%s, %s) pose", position['x'], position['y'])
-        success = navigator.goto(position, quaternion)
+        for i in range(10):
+            position = {'x': 1.36 + i, 'y' : -1.46 + i}
+            quaternion = {'r1' : 0.000, 'r2' : 0.000, 'r3' : 0.000, 'r4' : 1.000}
 
-        if success:
-            rospy.loginfo("Bingo! reached the desired pose")
-        else:
-            rospy.loginfo("The base failed to reach the desired position")
+            rospy.loginfo("Go to (%s, %s) pose", position['x'], position['y'])
+            success = navigator.goto(position, quaternion)
 
-        # Sleep to give the last log messages time to be sent
-        rospy.sleep(1)
+            if success:
+                rospy.loginfo("Bingo! reached the desired pose")
+            else:
+                rospy.loginfo("The base failed to reach the desired position")
+
+            # Sleep to give the last log messages time to be sent
+            rospy.sleep(1)
 
     except rospy.ROSInterruptException:
         rospy.loginfo("Ctrl-C caught. Quitting")
-
 

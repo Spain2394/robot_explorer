@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="my_waypoint_subscriber" pkg="robot_explorer" type="my_waypoint_subscriber.py"/>
+
+</launch>
+

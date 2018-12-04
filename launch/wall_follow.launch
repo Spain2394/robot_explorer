@@ -1,0 +1,6 @@
+<launch>
+
+  <node name="follower" pkg="robot_explorer" type="follower.py"/>
+
+</launch>
+

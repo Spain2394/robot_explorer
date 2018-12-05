@@ -10,7 +10,7 @@ DEFAULT_SUBSCRIBER_TOPIC = "/robot_1/base_scan"
 
 DEFAULT_WALL_DISTANCE = 0.3 # 0.13   # Distance from the wall
 DEFAULT_MAX_SPEED = 0.1    # Maximum speed of robot
-DEFAULT_P = 20    # Proportional constant for controller
+DEFAULT_P = 5    # Proportional constant for controller
 DEFAULT_D = 5    # Derivative constant for controller
 DEFAULT_ANGLE = 1    # Proportional constant for angle controller (just simple P controller)
 DEFAULT_DIRECTION = 1    # 1 for wall on the left side of the robot (-1 for the right side)

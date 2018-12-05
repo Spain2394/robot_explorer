@@ -28,6 +28,13 @@ For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Ho
 - Create ```my_ps3_teleop.launch``` to reflect controller config
 - To test using controller teleop run: ```roslaunch turtlebot_teleop my_ps3_teleop.launch```
 
+### Turtlbot
+ - [Turtlbot hardware setup](http://learn.turtlebot.com/2015/02/01/3/)
+ - To check for turtlbot usb connection run ```ls -al /dev | grep -i usb```
+ - You should see kobuki usb connection
+* More about [kobuki robot](http://kobuki.yujinrobot.com/about2/)
+
+
 ------
 ## Demos
 * [Wall Follower](#wall-follower)
@@ -63,7 +70,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 -------
 ## Future Work
 ### Running on Physical Turtlebot
-To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner, refer to [Laser Scanner](#laser-scanner) for details.
+To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner, refer to [Working with hardware](#working-with-hardware) for details.
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
 - This launches gmapping, turtlebot navigatin stack, RRT path planning, and Hokuyo driver related nodes.

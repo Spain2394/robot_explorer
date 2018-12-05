@@ -53,11 +53,16 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 
 Green line is the robots local plan
 
-
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
-* To test with image run: ```asfasdf```
+* To test SIFT with test image run: ```python ... source_image... target image```
+*
+
 -------
+## Future Work
 ### Running on Physical Turtlbot
+To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
+- This launches gmapping, RRT path planning, and Hokuyo driver related nodes.
+- Still need to interface with SIFT node with current network for target detection and localization.

@@ -11,9 +11,10 @@
 5) clone ROS package ```rrr_exploration``` for Physical Turtlbot
 6) clone ROS package ```urg_node```
 7) clone ```robot_explorer``` from [source](https://github.com/Spain2394/robot_explorer)
-8) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
-9) Source workspace by running  ```source devel/setup.bash``` in you  ```catkin_ws```
-10) Install [openCV](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
+8) Install [openCV](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
+9) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
+10) Source workspace by running  ```source devel/setup.bash``` in you  ```catkin_ws```
+
 
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
 

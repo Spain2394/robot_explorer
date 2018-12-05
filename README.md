@@ -12,7 +12,8 @@
 6) clone ROS package ```urg_node```
 7) clone ```robot_explorer``` from [source](https://github.com/Spain2394/robot_explorer)
 8) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
-9) Source ws by running  ```source devel/setup.bash``` in you  ```catkin_ws```
+9) Source workspace by running  ```source devel/setup.bash``` in you  ```catkin_ws```
+10) Install [openCV](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
 
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
 
@@ -55,16 +56,17 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
-* To test SIFT with test image run: ```python ... source_image... target image```
+* To test SIFT with test image run: ```python matching_script.py``` which tests on image: ```test_pic.jpg```
 
 
 ![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)
 -------
 ## Future Work
-### Running on Physical Turtlbot
+### Running on Physical Turtlebot
 To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
 - This launches gmapping, RRT path planning, and Hokuyo driver related nodes.
 - Still need to work out some ROS subscription issues for path planner.
-- Still need to interface with SIFT node with current network for target detection and localization.
+- Still need to interface with SIFT node with current ROS network for target detection and localization.
+  - Use images captured from RealSense camera

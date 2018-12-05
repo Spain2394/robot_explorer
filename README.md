@@ -63,7 +63,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 -------
 ## Future Work
 ### Running on Physical Turtlebot
-To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner
+To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner, refer to * [Teleoperation](#Teleoperation) for details.
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
 - This launches gmapping, RRT path planning, and Hokuyo driver related nodes.

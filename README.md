@@ -48,11 +48,19 @@ For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CP
 
 
 ### RRT Path Planning
-RRT Path planning using goals provided by service provider
+RRT Path planning using goals provided by service provider ``` fetch_goal.py```. The service provider posts 10 goals each further from the origin than the last. This script can be easily modified to post targets around the map for exploration and target discovery. 
 * To run: ```roslaunch rrt_exploration_tutorials single_simulated_house.launch```
 * To run service service provider run: ```python fetch_goal.py```
+*
+
+![1](https://github.com/Spain2394/robot_explorer/blob/master/ScreenCaps/rrt_sim.gif)
+
+Green line is the robots local plan
+
 
 ### SIFT Feature Detector
+* Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
+* To test with image run: ```asfasdf```
 *
 
 ### to run on TurtleBot

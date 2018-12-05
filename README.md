@@ -1,8 +1,7 @@
 ## robot-exploration
 - Turtlebot RRT path planning and target detection using SIFT
 
-## Requirements
-Install packages: </b>
+## Setup
 1) Clone RRT exploration package in you ```catkin_ws```
 2) Install ROS package navigation stack, for kinetic run
 ```sudo apt-get install ros-kinetic-navigation```

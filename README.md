@@ -36,8 +36,8 @@ For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Ho
 
 ### Wall Follower
 Simulates and stages bot in RVIZ and Gazebo, contains wall follower node which subscribes to ```rrt_exploration``` topic ```/robot_1/base_scan```
-This also publishes to topic ```"/robot_1/mobile_base/commands/velocity``` which drives the bot
-* run: ``` roslaunch ```
+This also publishes to topic ```/robot_1/mobile_base/commands/velocity``` which drives the bot
+* run: ```roslaunch robot_explorer wall_follow.launch```
 
 ![1](https://github.com/Spain2394/robot_explorer/blob/master/ScreenCaps/wall_sim.gif)
 

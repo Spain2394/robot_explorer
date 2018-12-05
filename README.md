@@ -1,5 +1,5 @@
 ## robot-exploration
-- Turtlebot RRT path planning and target detection using SIFT
+- Turtlebot SLAM, RRT path planning and target detection using SIFT
 
 ## Setup
 1) Clone ```rrt_exploration``` package in you ```catkin_ws```

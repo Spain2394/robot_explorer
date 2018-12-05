@@ -55,6 +55,11 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
 * To test SIFT with test image run: ```python ... source_image... target image```
+<<<<<<< HEAD
+=======
+
+![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)
+>>>>>>> 24d135764fc26ee67b6435ca48b10994a410b0ed
 
 -------
 ## Future Work

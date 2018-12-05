@@ -39,13 +39,9 @@ Simulates and stages bot in RVIZ and Gazebo, contains wall follower node which s
 This also publishes to topic ```/robot_1/mobile_base/commands/velocity``` which drives the bot
 * run: ```roslaunch robot_explorer wall_follow.launch```
 
-![1](https://github.com/Spain2394/robot_explorer/blob/master/ScreenCaps/wall_sim.gif)
-
-
-
+![1](https://github.com/Spain2394/robot_explorer/blob/master/Images/wall_sim.gif)
 
 For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CPP_INTRO/exercise/ROS_CPP_WALLFOLLOWING)
-
 
 ### RRT Path Planning
 RRT Path planning using goals provided by service provider ``` fetch_goal.py```. The service provider posts 10 goals each further from the origin than the last. This script can be easily modified to post targets around the map for exploration and target discovery. 
@@ -53,7 +49,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 * To run service service provider run: ```python fetch_goal.py```
 *
 
-![1](https://github.com/Spain2394/robot_explorer/blob/master/ScreenCaps/rrt_sim.gif)
+![2](https://github.com/Spain2394/robot_explorer/blob/master/Images/rrt_sim.gif)
 
 Green line is the robots local plan
 

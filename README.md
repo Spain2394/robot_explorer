@@ -52,7 +52,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 
 ![2](https://github.com/Spain2394/robot_explorer/blob/master/Images/rrt_sim.gif)
 
-* Green line is the robots path trajectory
+* Green line is the robots current trajectory
 
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.

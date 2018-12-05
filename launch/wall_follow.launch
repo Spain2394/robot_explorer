@@ -1,6 +1,10 @@
 <launch>
 
+  <!-- stage bot in simulated house running path plannign-->
+  <include file="$(find rrt_exploration)/launch/rrt_exploration_tutorials.launch">
+    <!-- <arg name="rgb_processing" value="false" /> <arg name="depth_registration" value="false" /> <arg name="depth_processing" value="false" /> <arg name="scan_topic" value="/scan" /> -->
+  </include>
+
   <node name="follower" pkg="robot_explorer" type="follower.py"/>
 
 </launch>
-

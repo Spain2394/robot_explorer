@@ -27,13 +27,20 @@ For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Ho
 
 
 ## Demos
-* [Wall follower](#wall-follower)
+* [Wall Follower](#wall-follower)
 * [RRT Path Planning](#rrt-path-planning)
-* [SIFT Feature detector](#rrt-path-planning)
+* [SIFT Feature detector](#sift-feature-detector)
 
-
-
+------
 ### Wall follower
+* asd
+* asd
+
+### RRT Path Planning
+
+
+
+
 
 ### to run on TurtleBot
 - run: ```roslaunch robot_explorer setup.launch```

@@ -1,6 +1,9 @@
 <launch>
 
-  <node name="my_waypoint_subscriber" pkg="robot_explorer" type="my_waypoint_subscriber.py"/>
+  <include file="$(find rrt_exploration_tutorials)/launch/single_simulated_house.launch">
+    <!-- <arg name="rgb_processing" value="false" /> <arg name="depth_registration" value="false" /> <arg name="depth_processing" value="false" /> <arg name="scan_topic" value="/scan" /> -->
+  </include>
+
+  <node name="fetch_goal" pkg="robot_explorer" type="fetch_goal.py"/>
 
 </launch>
-

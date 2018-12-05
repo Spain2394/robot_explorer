@@ -70,4 +70,3 @@ if __name__ == '__main__':
                                                                    len(waypoints)][0]})
 
         patrol.execute()
-

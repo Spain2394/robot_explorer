@@ -44,7 +44,7 @@ This also publishes to topic ```/robot_1/mobile_base/commands/velocity``` which 
 For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CPP_INTRO/exercise/ROS_CPP_WALLFOLLOWING)
 
 ### RRT Path Planning
-RRT Path planning using goals provided by service provider ``` fetch_goal.py```. The service provider posts 10 goals each further from the origin than the last. This script can be easily modified to post targets around the map for exploration and target discovery. 
+RRT Path planning using goals provided by service provider ``` fetch_goal.py```. The service provider posts 10 goals each further from the origin than the last. This script can be easily modified to post targets around the map for exploration and target discovery.
 * To run: ```roslaunch rrt_exploration_tutorials single_simulated_house.launch```
 * To run service service provider run: ```python fetch_goal.py```
 *
@@ -57,16 +57,7 @@ Green line is the robots local plan
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
 * To test with image run: ```asfasdf```
-*
-
-### to run on TurtleBot
+-------
+### Running on Physical Turtlbot
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
-
-### to run wall follower in simmulation
- - run: ```roslaunch rrt_exploration_tutorials single_simulated_house.launch```
- - run: ```roslaunch robot _explorer wall_follow.launch```
-
-### to run target waypoint simulalation
-- run: ``` roslaunch rrt_exploration_tutorials single_simulated_house.launch```
-- run: ``` python my_waypoint.py ```

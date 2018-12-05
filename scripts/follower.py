@@ -8,9 +8,9 @@ import math
 DEFAULT_PUBLISHER_TOPIC = "/robot_1/mobile_base/commands/velocity"
 DEFAULT_SUBSCRIBER_TOPIC = "/robot_1/base_scan"
 
-DEFAULT_WALL_DISTANCE = 0.13    # Distance from the wall
+DEFAULT_WALL_DISTANCE = 0.3 # 0.13   # Distance from the wall
 DEFAULT_MAX_SPEED = 0.1    # Maximum speed of robot
-DEFAULT_P = 10    # Proportional constant for controller
+DEFAULT_P = 20    # Proportional constant for controller
 DEFAULT_D = 5    # Derivative constant for controller
 DEFAULT_ANGLE = 1    # Proportional constant for angle controller (just simple P controller)
 DEFAULT_DIRECTION = 1    # 1 for wall on the left side of the robot (-1 for the right side)
@@ -28,7 +28,7 @@ class NodeWallFollowing(object):
         p: Proportional constant for controller.
         d: Derivative constant for controller.
         angle: Proportional constant for angle controller (just simple P controller).
-        
+
         e: Difference between desired distance from the wall and actual distance.
         angle_min: Angle, at which was measured the shortest distance.
         dist_front: Distance, measured by ranger in front of the robot.
@@ -148,10 +148,10 @@ if __name__ == '__main__':
     try:
         # Node initialization
         rospy.init_node('wall_following', anonymous=True)
- 
+
         # Creating object, which subscribes (receives) data from sensors and publish (send) them to the robot control
         node_wall_following = NodeWallFollowing()
- 
+
         # spin() keeps python from exiting until this node is stopped
         rospy.spin()
 

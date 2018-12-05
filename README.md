@@ -13,7 +13,7 @@ Install packages: </b>
 6) clone ROS package ```urg_node```
 7) clone ```robot_explorer``` from [source](https://github.com/Spain2394/robot_explorer)
 8) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
-9) Source ws by running  ```source devel/setup.bash``` in you  ```catkin_ws``` 
+9) Source ws by running  ```source devel/setup.bash``` in you  ```catkin_ws```
 
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
 
@@ -48,7 +48,9 @@ For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CP
 
 
 ### RRT Path Planning
-* SIFT Feature detector
+RRT Path planning using goals provided by service provider
+* To run: ```roslaunch rrt_exploration_tutorials single_simulated_house.launch```
+* To run service service provider run: ```python fetch_goal.py```
 
 ### SIFT Feature Detector
 *

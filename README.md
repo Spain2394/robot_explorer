@@ -56,7 +56,8 @@ Green line is the robots local plan
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
 * To test SIFT with test image run: ```python ... source_image... target image```
-*
+
+![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)
 
 -------
 ## Future Work

@@ -13,6 +13,7 @@
 7) clone ```robot_explorer``` from [source](https://github.com/Spain2394/robot_explorer)
 8) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
 9) Source ws by running  ```source devel/setup.bash``` in you  ```catkin_ws```
+10) Install [openCV](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
 
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
 
@@ -55,7 +56,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
-* To test SIFT with test image run: ```python ... source_image... target image```
+* To test SIFT with test image run: ```python matching_script.py``` which tests on image: ```test_pic.jpg```
 
 
 ![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)

@@ -68,5 +68,5 @@ To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scann
 - run: ```python fetch_goal.py```
 - This launches gmapping, turtlebot navigatin stack, RRT path planning, and Hokuyo driver related nodes.
 - Still need to work out some ROS subscription issues for path planner.
-- Still need to interface with SIFT node with current ROS network for target detection and localization.
+- Still need simple SIFT node to publish camera data to the network for target detection and localization.
   - Use images captured from RealSense camera

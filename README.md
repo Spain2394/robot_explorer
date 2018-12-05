@@ -11,6 +11,9 @@ Install packages: </b>
 4) clone ```rrt_exploration_tutorials``` for simulation
 5) clone ROS package ```rrr_exploration``` for Physical Turtlbot
 6) clone ROS package ```urg_node```
+7) clone ```robot_explorer``` from [source](https://github.com/Spain2394/robot_explorer)
+8) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
+9) Source ws by running  ```source devel/setup.bash``` in you  ```catkin_ws``` 
 
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
 
@@ -25,22 +28,28 @@ For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Ho
 - Create ```my_ps3_teleop.launch``` to reflect controller config
 - To test using controller teleop run: ```roslaunch turtlebot_teleop my_ps3_teleop.launch```
 
-
+------
 ## Demos
 * [Wall Follower](#wall-follower)
 * [RRT Path Planning](#rrt-path-planning)
-* [SIFT Feature detector](#sift-feature-detector)
+* [SIFT Feature Detector](#sift-feature-detector)
 
-------
-### Wall follower
-* asd
-* asd
+### Wall Follower
+Simulates and stages bot in RVIZ and Gazebo, contains wall follower node which subscribes to ```rrt_exploration``` topic ```/robot_1/base_scan```
+This also publishes to topic ```"/robot_1/mobile_base/commands/velocity``` which drives the bot
+* run: ``` roslaunch ```
+
+[Image]()
+
+
+For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CPP_INTRO/exercise/ROS_CPP_WALLFOLLOWING)
+
 
 ### RRT Path Planning
+* SIFT Feature detector
 
-
-
-
+### SIFT Feature Detector
+*
 
 ### to run on TurtleBot
 - run: ```roslaunch robot_explorer setup.launch```

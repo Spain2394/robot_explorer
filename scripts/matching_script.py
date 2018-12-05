@@ -1,7 +1,7 @@
 import numpy as np
 import cv2 as cv2
-# cv2.ocl.setUseOpenCL(False)  #try to use if there are problems
-# print(cv2.__version__)
+cv2.ocl.setUseOpenCL(False)  #try to use if there are problems
+print(cv2.__version__)
 
 def extract_features(img):
     # Initiate SIFT detector
@@ -9,7 +9,7 @@ def extract_features(img):
     # find the keypoints and descriptors with SIFT
     kp, des = sift.detectAndCompute(img,None)
     # return keypoints and descriptors
-    return (kp, des) 
+    return (kp, des)
 
 def find_matches(des1,des2):
     # find matches
@@ -50,7 +50,7 @@ def create_display_image(img1,img2,kp1,kp2,matches,good,matchesMask,M,MIN_MATCH_
     if NUM_DISPLAY_MATCHES == "good":
         display_matches=good
     else:
-        #cap the NUM_DISPLAY_MATCHES to the number of matches 
+        #cap the NUM_DISPLAY_MATCHES to the number of matches
         NUM_DISPLAY_MATCHES=min(NUM_DISPLAY_MATCHES,len(matches))
         display_matches = sorted(matches, key = lambda x:x[1].distance-x[0].distance)
         display_matches = display_matches[:NUM_DISPLAY_MATCHES]
@@ -85,7 +85,7 @@ def compare_images(img1,img2,MIN_MATCH_COUNT=10,NUM_DISPLAY_MATCHES="good"):
     kp1, des1 = extract_features(img1)
     kp2, des2 = extract_features(img2)
     # get matches
-    matches, good, matchesMask, M = get_matches_from_details(kp1, des1, kp2, des2, 
+    matches, good, matchesMask, M = get_matches_from_details(kp1, des1, kp2, des2,
                                                     MIN_MATCH_COUNT=MIN_MATCH_COUNT,mask=True)
     #create output image
     if not matchesMask is None:
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     img1 = img1[100:400,100:400,:] #crop image1
 
     img2 = cv2.imread("test_pic.jpg") # testImage
-    img2 = np.flip(np.swapaxes(img2,0,1), 0) # filped
+    img2 = np.flip(np.swapaxes(img2,0,1), 0) # flipped
 
     img3 = compare_images(img1,img2,NUM_DISPLAY_MATCHES=10)
     cv2.imwrite("matching_test2.jpg",img3)

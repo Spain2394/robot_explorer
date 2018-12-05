@@ -61,7 +61,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 ![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)
 -------
 ## Future Work
-### Running on Physical Turtlbot
+### Running on Physical Turtlebot
 To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```

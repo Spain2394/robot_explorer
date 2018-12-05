@@ -39,6 +39,7 @@ Simulates and stages bot in RVIZ and Gazebo, contains wall follower node which s
 This also publishes to topic ```/robot_1/mobile_base/commands/velocity``` which drives the bot
 * run: ```roslaunch robot_explorer wall_follow.launch```
 
+
 ![1](https://github.com/Spain2394/robot_explorer/blob/master/Images/wall_sim.gif)
 
 * For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CPP_INTRO/exercise/ROS_CPP_WALLFOLLOWING)
@@ -48,6 +49,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 * To run: ```roslaunch rrt_exploration_tutorials single_simulated_house.launch```
 * To run service service provider run: ```python fetch_goal.py```
 
+
 ![2](https://github.com/Spain2394/robot_explorer/blob/master/Images/rrt_sim.gif)
 
 * Green line is the robots local plan
@@ -55,12 +57,9 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 ### SIFT Feature Detector
 * Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
 * To test SIFT with test image run: ```python ... source_image... target image```
-<<<<<<< HEAD
-=======
+
 
 ![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)
->>>>>>> 24d135764fc26ee67b6435ca48b10994a410b0ed
-
 -------
 ## Future Work
 ### Running on Physical Turtlbot

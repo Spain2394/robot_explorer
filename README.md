@@ -39,7 +39,9 @@ Simulates and stages bot in RVIZ and Gazebo, contains wall follower node which s
 This also publishes to topic ```"/robot_1/mobile_base/commands/velocity``` which drives the bot
 * run: ``` roslaunch ```
 
-[Image]()
+![1](https://github.com/Spain2394/robot_explorer/blob/master/ScreenCaps/wall_sim.gif)
+
+
 
 
 For more information: [Wall Follower](https://syrotek.felk.cvut.cz/course/ROS_CPP_INTRO/exercise/ROS_CPP_WALLFOLLOWING)

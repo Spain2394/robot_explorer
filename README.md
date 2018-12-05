@@ -18,12 +18,12 @@
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
 
 ## Working with hardware
-**Laser Scanner**
+### Laser Scanner
 
 - check for usb connectivity by running:```ls -l /dev/ttyACM0```
 - to publish to the scan topic using live hokuyo sensor data run: ```rosrun urg_node urg_node```
 
-**Teleoperation**
+### Teleoperation
 - Controller config can be evaluated by running: ```jstest /dev/input/js0```
 - Create ```my_ps3_teleop.launch``` to reflect controller config
 - To test using controller teleop run: ```roslaunch turtlebot_teleop my_ps3_teleop.launch```
@@ -63,7 +63,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 -------
 ## Future Work
 ### Running on Physical Turtlebot
-To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner, refer to * [Teleoperation](#Teleoperation) for details.
+To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner, refer to [Teleoperation](#Teleoperation) for details.
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
 - This launches gmapping, RRT path planning, and Hokuyo driver related nodes.

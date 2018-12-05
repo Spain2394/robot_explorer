@@ -1,5 +1,5 @@
 ## robot-exploration
-- Turtlebot RRT exploration and target detection using SIFT
+- Turtlebot RRT path planning and target detection using SIFT
 
 ## Requirements
 Install packages: </b>

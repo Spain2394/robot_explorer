@@ -1,20 +1,39 @@
 ## robot-exploration
 - Turtlebot RRT exploration and target detection using SIFT
 
-## Setup
-- to bringup Turtlebot and perform mapping and localization run: ```roslaunch robot_explorer setup.launch```
+## Requirements
+Install packages: </b>
+1) Clone RRT exploration package in you ```catkin_ws```
+2) Install ROS package navigation stack, for kinetic run
+```sudo apt-get install ros-kinetic-navigation```
+3) Ensure that you have ROS package gmapping, for kinetic run
+```sudo apt-get install ros-kinetic-navigation```
+4) clone ```rrt_exploration_tutorials``` for simulation
+5) clone ROS package ```rrr_exploration``` for Physical Turtlbot
+6) clone ROS package ```urg_node```
 
-## Laser Scanner
+For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
+
+## Working with hardware
+**Laser Scanner**
+
 - check for usb connectivity by running:```ls -l /dev/ttyACM0```
 - to publish to the scan topic using live hokuyo sensor data run: ```rosrun urg_node urg_node```
 
-## Teleoperation
+**Teleoperation**
 - Controller config can be evaluated by running: ```jstest /dev/input/js0```
 - Create ```my_ps3_teleop.launch``` to reflect controller config
 - To test using controller teleop run: ```roslaunch turtlebot_teleop my_ps3_teleop.launch```
 
 
 ## Demos
+* [Wall follower](#wall-follower)
+* [RRT Path Planning](#rrt-path-planning)
+* [SIFT Feature detector](#rrt-path-planning)
+
+
+
+### Wall follower
 
 ### to run on TurtleBot
 - run: ```roslaunch robot_explorer setup.launch```
@@ -27,6 +46,3 @@
 ### to run target waypoint simulalation
 - run: ``` roslaunch rrt_exploration_tutorials single_simulated_house.launch```
 - run: ``` python my_waypoint.py ```
-
-
-

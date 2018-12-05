@@ -66,7 +66,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 To run with turtlebot you need to connect PC to Turtlebot and Hokuyo Laser Scanner, refer to [Laser Scanner](#laser-scanner) for details.
 - run: ```roslaunch robot_explorer setup.launch```
 - run: ```python fetch_goal.py```
-- This launches gmapping, RRT path planning, and Hokuyo driver related nodes.
+- This launches gmapping, turtlebot navigatin stack, RRT path planning, and Hokuyo driver related nodes.
 - Still need to work out some ROS subscription issues for path planner.
 - Still need to interface with SIFT node with current ROS network for target detection and localization.
   - Use images captured from RealSense camera

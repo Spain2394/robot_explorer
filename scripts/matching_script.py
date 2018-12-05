@@ -77,7 +77,7 @@ def get_matches_from_details(kp1, des1, kp2, des2, MIN_MATCH_COUNT=10,mask=True)
     return (matches, good, matchesMask, M)
 
 
-def compare_images(img1,img2,MIN_MATCH_COUNT=10,NUM_DISPLAY_MATCHES="good"):
+def compare_images(img1,img2,MIN_MATCH_COUNT=5,NUM_DISPLAY_MATCHES="good"):
     # resize, needed for testing or if the images have diffferent resolution
     if img1.shape != img2.shape:
         img2 = cv2.resize(img2, (img1.shape[1],img1.shape[0]), interpolation=cv2.INTER_CUBIC)

@@ -11,9 +11,10 @@
 5) clone ROS package ```rrr_exploration``` for Physical Turtlbot
 6) clone ROS package ```urg_node```
 7) clone ```robot_explorer``` from [source](https://github.com/Spain2394/robot_explorer)
-8) Install [openCV](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
-9) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
-10) Source workspace by running  ```source devel/setup.bash``` in you  ```catkin_ws```
+8) Install [openCV](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/) via ```pip2 install opencv-python==3.3.0.10 opencv-contrib-python==3.3.0.10```
+9) Install camera packages ```sudo apt install ros-kinetic-cv-camera ros-kinetic-usb-cam```
+10) Make workspace with command ```catkin_make``` in your ```~/[catkin_ws]```
+11) Source workspace by running  ```source devel/setup.bash``` in you  ```catkin_ws```
 
 
 For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Hokuyo Driver wiki](http://wiki.ros.org/urg_node)
@@ -63,8 +64,13 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 * Green line is the robots current trajectory
 
 ### SIFT Feature Detector
-* Scale invariant feature detection which takes an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
-* To test SIFT with test image run: ```python matching_script.py``` which tests on image: ```test_pic.jpg```
+* Scale invariant feature detection which detects objects relitive to the first frame recieved when the script is run. 
+* To Run with camera: ``` roscore
+rosrun usb_cam usb_cam_node
+roslaunch rrt_exploration_tutorials single_simulated_house.launch
+python SIFT_node.py```
+* The matching_script can also be run directly using an image of an object and a target image as input, and outputs a graphical image of the objects location as output, if the object is found.
+* To run SIFT with test image run: ```python matching_script.py``` which tests on image: ```test_pic.jpg```
 
 
 ![3](https://github.com/Spain2394/robot_explorer/blob/master/Images/matching_test2.jpg)

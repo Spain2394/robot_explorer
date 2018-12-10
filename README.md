@@ -30,7 +30,7 @@ For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Ho
 - Create ```my_ps3_teleop.launch``` to reflect controller config
 - To test using controller teleop run: ```roslaunch turtlebot_teleop my_ps3_teleop.launch```
 
-### Turtlbot
+### Turtlebot
 - [Turtlbot hardware setup](http://learn.turtlebot.com/2015/02/01/3/)
 - To check for turtlbot usb connection run ```ls -al /dev | grep -i usb```
 - You should see kobuki usb connection

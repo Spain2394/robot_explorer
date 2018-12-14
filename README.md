@@ -41,7 +41,7 @@ For more information visit: [RRT wiki](http://wiki.ros.org/rrt_exploration), [Ho
 ## Demos
 * [Wall Follower](#wall-follower)
 * [RRT Path Planning](#rrt-path-planning)
-* [SIFT Feature Detector](#sift-feature-detector)
+* [SIFT](#sift)
 
 ### Wall Follower
 Simulates and stages bot in RVIZ and Gazebo, contains wall follower node which subscribes to ```rrt_exploration``` topic ```/robot_1/base_scan```
@@ -63,7 +63,7 @@ RRT Path planning using goals provided by service provider ``` fetch_goal.py```.
 
 * Green line is the robots current trajectory
 
-### SIFT Feature Detector
+### SIFT 
 * Scale invariant feature detection which detects objects relitive to the first frame recieved when the script is run. 
 * To Run with camera: ``` roscore
 rosrun usb_cam usb_cam_node
